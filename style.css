@@ -1,26 +1,57 @@
+html{
+    height: 100%;
+}
 body{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    height: 100%;
 }
 .container{
     display: flex;
     gap: 50px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 .card{
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    border: 1px solid gray;
+    border-radius: 5px;
     padding: 50px;
     width: 300px;
+    height: 150px;
+
+}
+.card:hover , #one{
+    background-color: rgb(174, 174, 174);
+    box-shadow: 5px 0px 5px 0px gray;
 }
 .top ,
 .bottom{
     display: flex;
     justify-content: space-between;
 }
+.top{
+    justify-content: initial;
+    gap: 20px;
+}
+.top .left{
+    align-self: center;
+}
 img{
-    background-color: aqua;
+
     width: 50px;
     height: 50px;
+}
+.bottom .right{
+    align-self: center;
+}
+
+@media screen and (max-width:400px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
 }
